@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="High-quality Clear Acrylic Sheet perfect for awards, signage, and display applications. Professional craftsmanship by BrandCrafters Kenya.">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#28a745">
+    <meta name="msapplication-TileColor" content="#28a745">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -338,114 +350,37 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!-- Close Content -->
 
-    <!-- Start Article -->
+    <!-- Start Related Products -->
     <section class="py-5">
         <div class="container">
             <div class="row text-left p-2 pb-3">
                 <h4>Related Products</h4>
+                <p class="text-muted">Discover more BrandCrafters products that complement your branding needs</p>
             </div>
 
-            <!--Start Carousel Wrapper-->
-            <div id="carousel-related-product">
+            <!--Start Related Products Grid-->
+            <div class="row" id="related-products-grid">
 
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
+                <div class="col-12 col-md-4 p-2 pb-3">
+                    <div class="product-wap card rounded-0 h-100">
                         <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.jpg">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_02.jpg" alt="Gold Medal">
                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    <li><a class="btn btn-success text-white add-to-wishlist" href="#" data-product="Premium Gold Medal" data-price="3500"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html?product=gold-medal"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2 add-to-cart" href="#" data-product="Premium Gold Medal" data-price="3500" data-image="assets/img/shop_02.jpg" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Red Clothing</a>
+                            <a href="shop-single.html?product=gold-medal" class="h3 text-decoration-none text-dark">Premium Gold Medal</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
+                                <li class="text-muted">50mm | Custom Engraving</li>
                                 <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$20.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">White Shirt</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$25.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_10.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    <span class="badge bg-warning text-dark">Gold</span>
+                                    <span class="badge bg-secondary">Silver</span>
+                                    <span class="badge bg-danger">Bronze</span>
                                 </li>
                             </ul>
                             <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -457,10 +392,84 @@ https://templatemo.com/tm-559-zay-shop
                                     <i class="text-warning fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0">$45.00</p>
+                            <p class="text-center mb-0 h5 text-success">KSh 3,500</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-12 col-md-4 p-2 pb-3">
+                    <div class="product-wap card rounded-0 h-100">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_04.jpg" alt="Vinyl Stickers">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white add-to-wishlist" href="#" data-product="Custom Vinyl Stickers" data-price="150"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html?product=vinyl-stickers"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2 add-to-cart" href="#" data-product="Custom Vinyl Stickers" data-price="150" data-image="assets/img/shop_04.jpg" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="shop-single.html?product=vinyl-stickers" class="h3 text-decoration-none text-dark">Custom Vinyl Stickers</a>
+                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                <li class="text-muted">10cm x 10cm | Waterproof</li>
+                                <li class="pt-2">
+                                    <span class="badge bg-primary">Glossy</span>
+                                    <span class="badge bg-dark">Matte</span>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-center mb-0 h5 text-success">KSh 150</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 p-2 pb-3">
+                    <div class="product-wap card rounded-0 h-100">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_05.jpg" alt="Display Banner">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white add-to-wishlist" href="#" data-product="Roll-up Display Banner" data-price="4500"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html?product=display-banner"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2 add-to-cart" href="#" data-product="Roll-up Display Banner" data-price="4500" data-image="assets/img/shop_05.jpg" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="shop-single.html?product=display-banner" class="h3 text-decoration-none text-dark">Roll-up Display Banner</a>
+                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                <li class="text-muted">85cm x 200cm | Portable</li>
+                                <li class="pt-2">
+                                    <span class="badge bg-info">Standard</span>
+                                    <span class="badge bg-warning text-dark">Premium</span>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-center mb-0 h5 text-success">KSh 4,500</p>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+    <!-- End Related Products -->
 
                 <div class="p-2 pb-3">
                     <div class="product-wap card rounded-0">
@@ -833,7 +842,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@brandcrafters.co.ke">info@brandcrafters.co.ke</a>
+                            <a class="text-decoration-none" href="mailto:info@brandcrafters.com">info@brandcrafters.com</a>
                         </li>
                     </ul>
                 </div>

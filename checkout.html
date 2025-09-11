@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checkout - BrandCrafters | Your Brand, Built Bold</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Secure checkout for BrandCrafters products. Complete your order with multiple payment options including VISA, M-Pesa, and PayPal.">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#28a745">
+    <meta name="msapplication-TileColor" content="#28a745">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@brandcrafters.com">info@brandcrafters.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+254703767699">+254 703 767 699</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://facebook.com/brandcrafters" target="_blank"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/brandcrafters_ke" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/brandcrafters_ke" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/company/brandcrafters" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center brandcrafters-logo" href="index.html">
+                <span class="logo-b">B</span>
+                <span class="logo-text">randCrafters</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="shop.html?category=acrylics">Acrylics</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=medals">Medals</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=crystals">Crystals</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=vinyl-stickers">Vinyl Stickers</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=display-stands">Display Stands</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=banners">Banners</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=boards">8x4 Boards</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=gazebo">Gazebo</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=signages">Signages</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=fabrication">Fabrication Materials</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="cart.html">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-danger text-white cart-counter" id="cart-counter" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Checkout Hero Section -->
+    <section class="bg-success py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-light">
+                    <h1 class="h2">BrandCrafters Checkout</h1>
+                    <p>Complete your order securely with multiple payment options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="cart.html" class="text-decoration-none">Cart</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <!-- Billing Details Form -->
+            <div class="col-lg-8">
+                <form id="checkout-form">
+                    <!-- Billing Details -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0"><i class="fas fa-user"></i> Billing Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label for="county" class="form-label">County <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="county" required>
+                                        <option value="">Select County</option>
+                                        <option value="nairobi">Nairobi</option>
+                                        <option value="mombasa">Mombasa</option>
+                                        <option value="kiambu">Kiambu</option>
+                                        <option value="nakuru">Nakuru</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Delivery Address <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="address" rows="3" placeholder="House number and street name" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label for="branding" class="form-label">Branding Details (optional)</label>
+                                    <textarea class="form-control" id="branding" rows="3" placeholder="Please provide any information you'd like us to include for branding your items (logo, text, colors, etc.)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0"><i class="fas fa-truck"></i> Shipping Method</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="shipping" id="nairobi-cbd" value="100" checked>
+                                <label class="form-check-label d-flex justify-content-between w-100" for="nairobi-cbd">
+                                    <div>
+                                        <strong>Nairobi CBD</strong><br>
+                                        <small class="text-muted">(up to 5kg) 0-1km</small>
+                                    </div>
+                                    <span class="fw-bold">KSh 100.00</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="shipping" id="nairobi-metro" value="300">
+                                <label class="form-check-label d-flex justify-content-between w-100" for="nairobi-metro">
+                                    <div>
+                                        <strong>Nairobi Metropolitan</strong><br>
+                                        <small class="text-muted">Within 10 km</small>
+                                    </div>
+                                    <span class="fw-bold">KSh 300.00</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="shipping" id="upcountry" value="500">
+                                <label class="form-check-label d-flex justify-content-between w-100" for="upcountry">
+                                    <div>
+                                        <strong>Upcountry by Shuttle/Bus</strong><br>
+                                        <small class="text-muted">Requires Upfront Payment</small>
+                                    </div>
+                                    <span class="fw-bold">KSh 500.00</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="shipping" id="pickup" value="0">
+                                <label class="form-check-label d-flex justify-content-between w-100" for="pickup">
+                                    <div>
+                                        <strong>Pick Up from Store</strong><br>
+                                        <small class="text-muted">3rd Floor Avenue House, Nairobi, Kenya</small>
+                                    </div>
+                                    <span class="fw-bold text-success">FREE</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0"><i class="fas fa-credit-card"></i> Payment Method</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="payment" id="pay-on-delivery" value="cod" checked>
+                                <label class="form-check-label w-100" for="pay-on-delivery">
+                                    <strong>Pay on Delivery (Within Nairobi Only)</strong><br>
+                                    <small class="text-muted">Cash payment upon delivery</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="payment" id="mpesa" value="mpesa">
+                                <label class="form-check-label w-100" for="mpesa">
+                                    <strong>M-Pesa (STK Push)</strong><br>
+                                    <small class="text-muted">Secure mobile payment</small>
+                                    <div class="mt-2">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_LOGO-01.svg" alt="M-Pesa" height="20">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="payment" id="card" value="card">
+                                <label class="form-check-label w-100" for="card">
+                                    <strong>Credit/Debit Card</strong><br>
+                                    <small class="text-muted">VISA, Mastercard accepted</small>
+                                    <div class="mt-2">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="VISA" height="20" class="me-2">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" height="20">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check mb-3 p-3 border rounded">
+                                <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal">
+                                <label class="form-check-label w-100" for="paypal">
+                                    <strong>PayPal</strong><br>
+                                    <small class="text-muted">Secure international payment</small>
+                                    <div class="mt-2">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" height="20">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0"><i class="fas fa-receipt"></i> Your Order</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="checkout-order-summary">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                        
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="button" class="btn btn-success btn-lg" onclick="placeOrder()">
+                                <i class="fas fa-lock"></i> Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo brandcrafters-logo">
+                        <span class="logo-b">B</span>
+                        <span class="logo-text">randCrafters</span>
+                    </h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Nairobi, Kenya
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:+254703767699">+254 703 767 699</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@brandcrafters.com">info@brandcrafters.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="shop.html?category=acrylics">Acrylics</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=medals">Medals</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=crystals">Crystals</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=vinyl-stickers">Vinyl Stickers</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=banners">Banners</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=signages">Signages</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=fabrication">Fabrication</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="index.html">Home</a></li>
+                        <li><a class="text-decoration-none" href="about.html">About Us</a></li>
+                        <li><a class="text-decoration-none" href="shop.html">Shop</a></li>
+                        <li><a class="text-decoration-none" href="faq.html">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contact</a></li>
+                        <li><a class="text-decoration-none" href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://facebook.com/brandcrafters"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/brandcrafters_ke"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/brandcrafters_ke"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/company/brandcrafters"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Your email">
+                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2025 BrandCrafters Kenya 
+                            | Your Brand, Built Bold
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Enhanced WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="toggleWhatsAppChat()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-chat-widget" id="whatsapp-chat">
+        <div class="whatsapp-prompt">
+            <div class="whatsapp-prompt-content">
+                <div class="whatsapp-prompt-text">
+                    <strong>Need help?</strong><br>
+                    Chat with us on WhatsApp!
+                </div>
+                <button class="whatsapp-prompt-close" onclick="dismissWhatsAppPrompt()">×</button>
+            </div>
+        </div>
+        
+        <div class="whatsapp-chat-container">
+            <div class="whatsapp-chat-header">
+                <div class="whatsapp-chat-avatar">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="whatsapp-chat-info">
+                    <div class="whatsapp-chat-name">BrandCrafters</div>
+                    <div class="whatsapp-chat-status">Online</div>
+                </div>
+                <button class="whatsapp-chat-close" onclick="toggleWhatsAppChat()">×</button>
+            </div>
+            
+            <div class="whatsapp-chat-messages">
+                <div class="whatsapp-message received">
+                    <div class="message-content">
+                        <p>Hello! 👋</p>
+                        <p>I see you're at checkout! Need any help completing your order?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-chat-footer">
+                <a href="https://wa.me/254703767699?text=Hi! I need help with my checkout process." 
+                   class="whatsapp-start-chat" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Start Conversation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        // Initialize checkout page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCounter();
+            loadCheckoutSummary();
+            
+            // Update shipping cost when radio button changes
+            document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    updateCheckoutTotal();
+                });
+            });
+        });
+
+        // Load checkout order summary
+        function loadCheckoutSummary() {
+            const cart = JSON.parse(localStorage.getItem('brandcrafters_cart')) || [];
+            const summaryContainer = document.getElementById('checkout-order-summary');
+            
+            if (cart.length === 0) {
+                summaryContainer.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Your cart is empty</p>
+                        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+                `;
+                return;
+            }
+
+            let summaryHTML = '';
+            let subtotal = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                summaryHTML += `
+                    <div class="d-flex justify-content-between border-bottom py-2">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            <small class="text-muted">× ${item.quantity}</small>
+                        </div>
+                        <span>KSh ${itemTotal.toLocaleString()}</span>
+                    </div>
+                `;
+            });
+
+            const shippingCost = parseInt(document.querySelector('input[name="shipping"]:checked')?.value || 100);
+            const total = subtotal + shippingCost;
+
+            summaryHTML += `
+                <div class="mt-3">
+                    <div class="d-flex justify-content-between">
+                        <span>Subtotal:</span>
+                        <span>KSh ${subtotal.toLocaleString()}</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Shipping:</span>
+                        <span id="shipping-cost">KSh ${shippingCost.toLocaleString()}</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between h5">
+                        <strong>Total:</strong>
+                        <strong class="text-success" id="final-total">KSh ${total.toLocaleString()}</strong>
+                    </div>
+                </div>
+            `;
+
+            summaryContainer.innerHTML = summaryHTML;
+        }
+
+        // Update checkout total when shipping changes
+        function updateCheckoutTotal() {
+            const cart = JSON.parse(localStorage.getItem('brandcrafters_cart')) || [];
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            const shippingCost = parseInt(document.querySelector('input[name="shipping"]:checked')?.value || 100);
+            const total = subtotal + shippingCost;
+
+            document.getElementById('shipping-cost').textContent = `KSh ${shippingCost.toLocaleString()}`;
+            document.getElementById('final-total').textContent = `KSh ${total.toLocaleString()}`;
+        }
+
+        // Place order function
+        function placeOrder() {
+            const form = document.getElementById('checkout-form');
+            const formData = new FormData(form);
+            
+            // Validate required fields
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const cart = JSON.parse(localStorage.getItem('brandcrafters_cart')) || [];
+            if (cart.length === 0) {
+                showNotification('Your cart is empty!', 'error');
+                return;
+            }
+
+            const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            const shippingCost = parseInt(document.querySelector('input[name="shipping"]:checked')?.value || 100);
+            const total = subtotal + shippingCost;
+
+            // Process payment based on selected method
+            if (paymentMethod === 'mpesa') {
+                processMpesaPayment(total);
+            } else if (paymentMethod === 'card') {
+                processCardPayment(total);
+            } else if (paymentMethod === 'paypal') {
+                processPayPalPayment(total);
+            } else {
+                // Cash on delivery
+                processCashOnDelivery();
+            }
+        }
+
+        // Payment processing functions
+        function processMpesaPayment(amount) {
+            showNotification('Initiating M-Pesa STK Push...', 'info');
+            
+            setTimeout(() => {
+                showNotification('M-Pesa payment successful! Order confirmed.', 'success');
+                completeOrder();
+            }, 3000);
+        }
+
+        function processCardPayment(amount) {
+            showNotification('Redirecting to secure payment gateway...', 'info');
+            
+            setTimeout(() => {
+                showNotification('Card payment successful! Order confirmed.', 'success');
+                completeOrder();
+            }, 2000);
+        }
+
+        function processPayPalPayment(amount) {
+            showNotification('Redirecting to PayPal...', 'info');
+            
+            setTimeout(() => {
+                showNotification('PayPal payment successful! Order confirmed.', 'success');
+                completeOrder();
+            }, 2000);
+        }
+
+        function processCashOnDelivery() {
+            showNotification('Order placed successfully! Pay cash on delivery.', 'success');
+            completeOrder();
+        }
+
+        // Complete order
+        function completeOrder() {
+            // Clear cart
+            localStorage.removeItem('brandcrafters_cart');
+            
+            // Show success message and redirect
+            setTimeout(() => {
+                alert('Thank you for your order! You will receive a confirmation email shortly.');
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    </script>
+    <!-- End Script -->
+
+</body>
+</html>

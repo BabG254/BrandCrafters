@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Learn about BrandCrafters - Kenya's premier branding and signage company. Professional solutions for acrylics, medals, crystals, and more.">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#28a745">
+    <meta name="msapplication-TileColor" content="#28a745">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -105,13 +117,9 @@ https://templatemo.com/tm-559-zay-shop
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="cart.html">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-danger text-white cart-counter" id="cart-counter" style="display: none;">0</span>
                     </a>
                 </div>
             </div>
@@ -162,10 +170,10 @@ https://templatemo.com/tm-559-zay-shop
     <section class="container py-5">
         <div class="row text-center pt-5 pb-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Our Services</h1>
+                <h1 class="h1">About BrandCrafters</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    Lorem ipsum dolor sit amet.
+                    Professional branding and signage solutions in Kenya. We specialize in creating 
+                    high-quality acrylics, medals, crystals, and custom signage to make your brand stand out.
                 </p>
             </div>
         </div>
@@ -173,29 +181,29 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                    <h2 class="h5 mt-4 text-center">Delivery Services</h2>
+                    <div class="h1 text-success text-center"><i class="fas fa-award fa-lg"></i></div>
+                    <h2 class="h5 mt-4 text-center">Premium Quality</h2>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                    <h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+                    <div class="h1 text-success text-center"><i class="fas fa-paint-brush"></i></div>
+                    <h2 class="h5 mt-4 text-center">Custom Design</h2>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
-                    <h2 class="h5 mt-4 text-center">Promotion</h2>
+                    <div class="h1 text-success text-center"><i class="fas fa-shipping-fast"></i></div>
+                    <h2 class="h5 mt-4 text-center">Fast Delivery</h2>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                    <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+                    <div class="h1 text-success text-center"><i class="fas fa-headset"></i></div>
+                    <h2 class="h5 mt-4 text-center">24/7 Support</h2>
                 </div>
             </div>
         </div>
@@ -312,20 +320,28 @@ https://templatemo.com/tm-559-zay-shop
         <div class="container">
             <div class="row">
 
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo brandcrafters-logo">
+                        <span class="logo-b">B</span>
+                        <span class="logo-text">randCrafters</span>
+                    </h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            123 Consectetur at ligula 10660
+                            Nairobi, Kenya
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            <a class="text-decoration-none" href="tel:+254703767699">+254 703 767 699</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                            <a class="text-decoration-none" href="mailto:info@brandcrafters.com">info@brandcrafters.com</a>
                         </li>
                     </ul>
                 </div>
@@ -333,24 +349,25 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=acrylics">Acrylics</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=medals">Medals</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=crystals">Crystals</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=vinyl-stickers">Vinyl Stickers</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=banners">Banners</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=signages">Signages</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?category=fabrication">Fabrication</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none" href="index.html">Home</a></li>
+                        <li><a class="text-decoration-none" href="about.html">About Us</a></li>
+                        <li><a class="text-decoration-none" href="shop.html">Shop</a></li>
+                        <li><a class="text-decoration-none" href="faq.html">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contact</a></li>
+                        <li><a class="text-decoration-none" href="terms.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
 
@@ -391,8 +408,8 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com/page/1" target="_blank">TemplateMo</a>
+                            Copyright &copy; 2025 BrandCrafters Kenya 
+                            | Your Brand, Built Bold
                         </p>
                     </div>
                 </div>
@@ -402,12 +419,68 @@ https://templatemo.com/tm-559-zay-shop
     </footer>
     <!-- End Footer -->
 
+    <!-- Enhanced WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="toggleWhatsAppChat()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-chat-widget" id="whatsapp-chat">
+        <div class="whatsapp-prompt">
+            <div class="whatsapp-prompt-content">
+                <div class="whatsapp-prompt-text">
+                    <strong>Need help?</strong><br>
+                    Chat with us on WhatsApp!
+                </div>
+                <button class="whatsapp-prompt-close" onclick="dismissWhatsAppPrompt()">×</button>
+            </div>
+        </div>
+        
+        <div class="whatsapp-chat-container">
+            <div class="whatsapp-chat-header">
+                <div class="whatsapp-chat-avatar">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="whatsapp-chat-info">
+                    <div class="whatsapp-chat-name">BrandCrafters</div>
+                    <div class="whatsapp-chat-status">Online</div>
+                </div>
+                <button class="whatsapp-chat-close" onclick="toggleWhatsAppChat()">×</button>
+            </div>
+            
+            <div class="whatsapp-chat-messages">
+                <div class="whatsapp-message received">
+                    <div class="message-content">
+                        <p>Hello! 👋</p>
+                        <p>Welcome to BrandCrafters! How can we help you with your branding needs today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-chat-footer">
+                <a href="https://wa.me/254703767699?text=Hi! I'd like to know more about BrandCrafters services." 
+                   class="whatsapp-start-chat" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Start Conversation
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        // Initialize cart counter on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCounter();
+        });
+    </script>
     <!-- End Script -->
 </body>
 

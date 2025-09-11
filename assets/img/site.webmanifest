@@ -1,0 +1,27 @@
+{
+    "name": "BrandCrafters - Your Brand, Built Bold",
+    "short_name": "BrandCrafters",
+    "description": "Professional branding and signage solutions. Acrylics, medals, crystals, vinyl stickers, display stands, banners, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#28a745",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "apple-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "favicon.ico",
+            "sizes": "16x16 32x32",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": ["business", "shopping", "productivity"],
+    "lang": "en",
+    "scope": "/",
+    "id": "brandcrafters-kenya"
+}

@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Contact BrandCrafters for professional branding and signage solutions. Get in touch for custom acrylics, medals, crystals, and more.">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#28a745">
+    <meta name="msapplication-TileColor" content="#28a745">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -56,8 +68,9 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                Zay
+            <a class="navbar-brand text-success logo h1 align-self-center brandcrafters-logo" href="index.html">
+                <span class="logo-b">B</span>
+                <span class="logo-text">randCrafters</span>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,8 +86,22 @@ https://templatemo.com/tm-559-zay-shop
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="shop.html?category=acrylics">Acrylics</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=medals">Medals</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=crystals">Crystals</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=vinyl-stickers">Vinyl Stickers</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=display-stands">Display Stands</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=banners">Banners</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=boards">8x4 Boards</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=gazebo">Gazebo</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=signages">Signages</a></li>
+                                <li><a class="dropdown-item" href="shop.html?category=fabrication">Fabrication Materials</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -93,11 +120,11 @@ https://templatemo.com/tm-559-zay-shop
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="cart.html">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-danger text-white cart-counter" id="cart-counter" style="display: none;">0</span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                </div>
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
@@ -278,8 +305,8 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                            Copyright &copy; 2025 BrandCrafters Kenya 
+                            | Your Brand, Built Bold
                         </p>
                     </div>
                 </div>
@@ -288,6 +315,55 @@ https://templatemo.com/tm-559-zay-shop
 
     </footer>
     <!-- End Footer -->
+
+    <!-- Enhanced WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="toggleWhatsAppChat()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-chat-widget" id="whatsapp-chat">
+        <div class="whatsapp-prompt">
+            <div class="whatsapp-prompt-content">
+                <div class="whatsapp-prompt-text">
+                    <strong>Need help?</strong><br>
+                    Chat with us on WhatsApp!
+                </div>
+                <button class="whatsapp-prompt-close" onclick="dismissWhatsAppPrompt()">×</button>
+            </div>
+        </div>
+        
+        <div class="whatsapp-chat-container">
+            <div class="whatsapp-chat-header">
+                <div class="whatsapp-chat-avatar">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="whatsapp-chat-info">
+                    <div class="whatsapp-chat-name">BrandCrafters</div>
+                    <div class="whatsapp-chat-status">Online</div>
+                </div>
+                <button class="whatsapp-chat-close" onclick="toggleWhatsAppChat()">×</button>
+            </div>
+            
+            <div class="whatsapp-chat-messages">
+                <div class="whatsapp-message received">
+                    <div class="message-content">
+                        <p>Hello! 👋</p>
+                        <p>Ready to get in touch? We're here to help with all your branding needs!</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-chat-footer">
+                <a href="https://wa.me/254703767699?text=Hi! I'd like to get in touch about BrandCrafters services." 
+                   class="whatsapp-start-chat" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Start Conversation
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>

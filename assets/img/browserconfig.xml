@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="apple-icon.png"/>
+            <TileColor>#28a745</TileColor>
+        </tile>
+        <notification>
+            <polling-uri src="https://brandcrafters.com/notifications/"/>
+            <frequency>30</frequency>
+            <cycle>1</cycle>
+        </notification>
+    </msapplication>
+</browserconfig>

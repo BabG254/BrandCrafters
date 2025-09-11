@@ -364,24 +364,47 @@ function loadCartItems() {
     cartItemsContainer.innerHTML = cartHTML;
     
     if (cartSummary) {
+        const delivery = total > 0 ? 500 : 0;
+        const finalTotal = total + delivery;
+        
         cartSummary.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Order Summary</h4>
-                    <div class="d-flex justify-content-between">
-                        <span>Subtotal:</span>
-                        <span>KES ${total.toLocaleString()}</span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <span>Shipping:</span>
-                        <span>Free</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between h5">
-                        <span>Total:</span>
-                        <span>KES ${total.toLocaleString()}</span>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal:</span>
+                <span>KES ${total.toLocaleString()}</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <span>Delivery:</span>
+                <span>KES ${delivery.toLocaleString()}</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between mb-3">
+                <strong>Total:</strong>
+                <strong class="text-success">KES ${finalTotal.toLocaleString()}</strong>
+            </div>
+
+            <!-- Proceed to Checkout Button -->
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-success btn-lg" onclick="proceedToCheckout()" ${total === 0 ? 'disabled' : ''}>
+                    <i class="fas fa-credit-card"></i> Proceed to Checkout
+                </button>
+            </div>
+
+            <!-- Alternative Actions -->
+            <div class="d-flex gap-2 mb-3">
+                <a href="https://wa.me/254703767699?text=Hi! I'm interested in ordering products from my cart. Total: KES ${finalTotal.toLocaleString()}" 
+                   class="btn btn-outline-success flex-fill" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Order
+                </a>
+                <a href="tel:+254703767699" class="btn btn-outline-primary flex-fill">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+            </div>
+
+            <!-- Till Number Info -->
+            <div class="alert alert-info">
+                <h6><i class="fas fa-mobile-alt"></i> Pay via M-Pesa</h6>
+                <strong>Till Number: 12345678</strong><br>
+                <small class="text-muted">Pay on Delivery Also Accepted</small>
             </div>
         `;
     }
@@ -405,6 +428,17 @@ function updateCartQuantity(index, newQuantity) {
     }
 }
 
+// Proceed to checkout function
+function proceedToCheckout() {
+    if (cart.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+    }
+    
+    // Redirect to checkout page
+    window.location.href = 'checkout.html';
+}
+
 // Remove item from cart
 function removeFromCart(index) {
     cart.splice(index, 1);
@@ -412,6 +446,83 @@ function removeFromCart(index) {
     updateCartCounter();
     loadCartItems();
     showNotification('Item removed from cart', 'success');
+}
+
+// Load more related products function
+function loadMoreRelatedProducts() {
+    const relatedProductsData = [
+        {
+            name: "Acrylic Display Stand",
+            price: 2800,
+            image: "assets/img/shop_06.jpg",
+            description: "A4 size acrylic display stand for brochures and documents",
+            rating: 4,
+            badges: ["Clear", "Frosted"]
+        },
+        {
+            name: "Custom Business Cards",
+            price: 800,
+            image: "assets/img/shop_01.jpg", 
+            description: "Premium business cards with UV coating",
+            rating: 5,
+            badges: ["Matte", "Glossy"]
+        },
+        {
+            name: "LED Light Box Sign",
+            price: 12000,
+            image: "assets/img/shop_11.jpg",
+            description: "Energy efficient LED illuminated signage",
+            rating: 5,
+            badges: ["Indoor", "Outdoor"]
+        }
+    ];
+
+    const grid = document.getElementById('related-products-grid');
+    const button = event.target;
+    
+    // Add new products to grid
+    relatedProductsData.forEach(product => {
+        const productHTML = `
+            <div class="col-12 col-md-4 p-2 pb-3">
+                <div class="product-wap card rounded-0 h-100">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="${product.image}" alt="${product.name}">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white add-to-wishlist" href="#" data-product="${product.name}" data-price="${product.price}"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html?product=${product.name.toLowerCase().replace(/\s+/g, '-')}"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2 add-to-cart" href="#" data-product="${product.name}" data-price="${product.price}" data-image="${product.image}" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html?product=${product.name.toLowerCase().replace(/\s+/g, '-')}" class="h3 text-decoration-none text-dark">${product.name}</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="text-muted">${product.description}</li>
+                            <li class="pt-2">
+                                ${product.badges.map(badge => `<span class="badge bg-secondary">${badge}</span>`).join(' ')}
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                ${Array(5).fill().map((_, i) => 
+                                    `<i class="${i < product.rating ? 'text-warning' : 'text-muted'} fa fa-star"></i>`
+                                ).join('')}
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0 h5 text-success">KSh ${product.price.toLocaleString()}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        grid.insertAdjacentHTML('beforeend', productHTML);
+    });
+    
+    // Hide the "Load More" button after loading
+    button.style.display = 'none';
+    
+    // Show success message
+    showNotification('More related products loaded!', 'success');
 }
 
 // Global functions for external access
@@ -423,3 +534,4 @@ window.toggleWhatsAppChat = toggleWhatsAppChat;
 window.loadCartItems = loadCartItems;
 window.updateCartQuantity = updateCartQuantity;
 window.removeFromCart = removeFromCart;
+window.loadMoreRelatedProducts = loadMoreRelatedProducts;
