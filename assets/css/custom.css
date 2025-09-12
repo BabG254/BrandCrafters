@@ -48,6 +48,160 @@ Color Scheme:
 .bg-secondary-brand { background-color: #0057B7 !important; }
 
 /* Enhanced WhatsApp Floating Button with Chat Interface */
+
+/* Delivery Animation Styles */
+.delivery-animation-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-scooter-animated {
+    max-width: 100%;
+    height: auto;
+    animation: deliveryMove 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes deliveryMove {
+    0% {
+        transform: translateX(-20px) scale(1);
+    }
+    25% {
+        transform: translateX(10px) scale(1.05);
+    }
+    50% {
+        transform: translateX(20px) scale(1.1);
+    }
+    75% {
+        transform: translateX(10px) scale(1.05);
+    }
+    100% {
+        transform: translateX(-20px) scale(1);
+    }
+}
+
+.delivery-scooter-animated:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+/* Hero banner image styling */
+.hero-banner-img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-banner-img:hover {
+    transform: scale(1.05);
+}
+
+/* Product Card Image Consistency */
+.product-wap .card-img-top {
+    height: 250px !important;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.product-wap .card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.product-wap {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-wap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Card Images */
+.category-card {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.category-card:hover {
+    transform: scale(1.1);
+}
+
+/* Category section alignment */
+.col-12.col-md-4.p-5.mt-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.col-12.col-md-4.p-5.mt-3 h5,
+.col-12.col-md-4.p-5.mt-3 h2 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.col-12.col-md-4.p-5.mt-3 p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Cart Counter Styling */
+.cart-counter {
+    min-width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    animation: cartBadgeAppear 0.3s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.cart-counter:not(.d-none) {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes cartBadgeAppear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Cart counter pulse animation when item added */
+.cart-counter.pulse {
+    animation: cartPulse 0.6s ease-in-out;
+}
+
+@keyframes cartPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
 .whatsapp-float {
     position: fixed;
     width: 60px;

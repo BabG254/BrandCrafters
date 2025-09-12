@@ -11,10 +11,47 @@ function updateCartCounter() {
     cartCounters.forEach(counter => {
         if (counter) {
             counter.textContent = cartCount;
-            counter.style.display = cartCount > 0 ? 'inline' : 'none';
+            if (cartCount > 0) {
+                counter.style.display = 'inline';
+                counter.classList.remove('d-none');
+            } else {
+                counter.style.display = 'none';
+                counter.classList.add('d-none');
+            }
         }
     });
+    
+    // Update cart page if it exists
+    if (typeof updateCartPage === 'function') {
+        updateCartPage();
+    }
 }
+
+// Initialize cart counter on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCounter();
+    
+    // Add event listeners to add-to-cart buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            addToCart(this);
+        });
+    });
+    
+    // Add event listeners to wishlist buttons
+    const wishlistButtons = document.querySelectorAll('.add-to-wishlist');
+    wishlistButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productName = this.getAttribute('data-product');
+            const price = parseInt(this.getAttribute('data-price'));
+            const image = this.getAttribute('data-image') || 'assets/img/shop_01.jpg';
+            addToWishlist(productName, price, image);
+        });
+    });
+});
 
 // Add to cart function - Enhanced but simple
 function addToCart(button) {
@@ -42,6 +79,18 @@ function addToCart(button) {
     
     localStorage.setItem('brandcrafters_cart', JSON.stringify(cart));
     updateCartCounter();
+    
+    // Add pulse animation to cart counter
+    const cartCounters = document.querySelectorAll('.cart-counter, #cart-counter');
+    cartCounters.forEach(counter => {
+        if (counter) {
+            counter.classList.add('pulse');
+            setTimeout(() => {
+                counter.classList.remove('pulse');
+            }, 600);
+        }
+    });
+    
     showNotification(`${productName} added to cart!`, 'success');
 }
 

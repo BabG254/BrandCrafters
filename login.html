@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Contact Us - BrandCrafters | Your Brand, Built Bold</title>
+    <title>Login - BrandCrafters | Your Brand, Built Bold</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact BrandCrafters for professional branding and signage solutions. Get in touch for custom acrylics, medals, crystals, and more.">
+    <meta name="description" content="Login to your BrandCrafters account to access exclusive features and track your orders.">
 
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/svg+xml" href="assets/img/brandcrafters-icon.svg">
@@ -30,8 +30,6 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-
-
 </head>
 
 <body>
@@ -55,7 +53,6 @@
         </div>
     </nav>
     <!-- Close Top Nav -->
-
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
@@ -117,6 +114,10 @@
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-danger text-white cart-counter" id="cart-counter" style="display: none;">0</span>
                     </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="login.html">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -140,67 +141,78 @@
         </div>
     </div>
 
-
-    <!-- Start Content Page -->
+    <!-- Start Login Content -->
     <div class="container-fluid bg-light py-5">
         <div class="col-md-6 m-auto text-center">
-            <h1 class="h1">Contact Us</h1>
+            <h1 class="h1">Login to Your Account</h1>
             <p>
-                Get in touch with BrandCrafters for professional branding and signage solutions. 
-                We're here to help bring your vision to life with quality products and exceptional service.
+                Access your BrandCrafters account to track orders, manage preferences, and get exclusive deals.
             </p>
         </div>
     </div>
 
-    <!-- Start Map -->
-    <div class="container-fluid p-0">
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19042468!2d36.7073077!3d-1.2864218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1693832000000!5m2!1sen!2ske" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="BrandCrafters Location - Nairobi, Kenya">
-            </iframe>
-        </div>
-    </div>
-    <!-- End Map -->
-
-    <!-- Start Contact -->
+    <!-- Start Login Form -->
     <div class="container py-5">
-        <div class="row py-5">
-            <form class="col-md-9 m-auto" method="post" role="form">
-                <div class="row">
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputname">Name</label>
-                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="brandcrafters-logo mb-3" style="justify-content: center;">
+                                <span class="logo-b">B</span>
+                                <span class="logo-text">randCrafters</span>
+                            </div>
+                            <h4>Welcome Back!</h4>
+                            <p class="text-muted">Sign in to your account</p>
+                        </div>
+
+                        <form id="loginForm" method="post" action="#">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            
+                            <div class="mb-3 form-check d-flex justify-content-between align-items-center">
+                                <div>
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="text-decoration-none text-success">Forgot Password?</a>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success btn-lg">Sign In</button>
+                            </div>
+                        </form>
+
+                        <hr class="my-4">
+                        
+                        <div class="text-center">
+                            <p class="mb-0">Don't have an account? <a href="#" class="text-success text-decoration-none">Sign up here</a></p>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <p class="text-muted small">Or continue with</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-google"></i> Google
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-facebook-f"></i> Facebook
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputemail">Email</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
-                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputsubject">Subject</label>
-                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject">
-                </div>
-                <div class="mb-3">
-                    <label for="inputmessage">Message</label>
-                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Message" rows="8"></textarea>
-                </div>
-                <div class="row">
-                    <div class="col text-end mt-2">
-                        <button type="submit" class="btn btn-success btn-lg px-3">Let’s Talk</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-    <!-- End Contact -->
-
+    <!-- End Login Form -->
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
@@ -208,7 +220,10 @@
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">BrandCrafters</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo brandcrafters-logo">
+                        <span class="logo-b">B</span>
+                        <span class="logo-text">randCrafters</span>
+                    </h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -303,56 +318,30 @@
         <i class="fab fa-whatsapp"></i>
     </div>
 
-    <!-- WhatsApp Chat Widget -->
-    <div class="whatsapp-chat-widget" id="whatsapp-chat">
-        <div class="whatsapp-prompt">
-            <div class="whatsapp-prompt-content">
-                <div class="whatsapp-prompt-text">
-                    <strong>Need help?</strong><br>
-                    Chat with us on WhatsApp!
-                </div>
-                <button class="whatsapp-prompt-close" onclick="dismissWhatsAppPrompt()">×</button>
-            </div>
-        </div>
-        
-        <div class="whatsapp-chat-container">
-            <div class="whatsapp-chat-header">
-                <div class="whatsapp-chat-avatar">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="whatsapp-chat-info">
-                    <div class="whatsapp-chat-name">BrandCrafters</div>
-                    <div class="whatsapp-chat-status">Online</div>
-                </div>
-                <button class="whatsapp-chat-close" onclick="toggleWhatsAppChat()">×</button>
-            </div>
-            
-            <div class="whatsapp-chat-messages">
-                <div class="whatsapp-message received">
-                    <div class="message-content">
-                        <p>Hello! 👋</p>
-                        <p>Ready to get in touch? We're here to help with all your branding needs!</p>
-                        <span class="message-time">Just now</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="whatsapp-chat-footer">
-                <a href="https://wa.me/254703767699?text=Hi! I'd like to get in touch about BrandCrafters services." 
-                   class="whatsapp-start-chat" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    Start Conversation
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        // Basic login form handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                // For now, just show a success message
+                alert('Login functionality will be implemented soon!\n\nEmail: ' + email);
+                
+                // In a real application, you would send this data to your backend
+                // and handle authentication properly
+            }
+        });
+    </script>
     <!-- End Script -->
 </body>
 

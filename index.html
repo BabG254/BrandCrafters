@@ -10,11 +10,12 @@
     <meta name="author" content="BrandCrafters">
 
     <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/brandcrafters-icon.svg">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brandcrafters-icon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brandcrafters-icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brandcrafters-icon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/brandcrafters-icon.svg">
     
     <!-- Web App Manifest -->
     <link rel="manifest" href="assets/img/site.webmanifest">
@@ -114,11 +115,10 @@
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="cart.html">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-danger text-white cart-counter" id="cart-counter" style="display: none;">0</span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="login.html">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                 </div>
             </div>
@@ -199,7 +199,9 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_03.jpg" alt="Fast Delivery Kenya">
+                            <div class="delivery-animation-container">
+                                <img class="img-fluid delivery-scooter-animated" src="./assets/img/fastdelivery.jpg" alt="Fast Delivery Kenya">
+                            </div>
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left hero-content">
