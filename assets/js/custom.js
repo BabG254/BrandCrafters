@@ -584,3 +584,322 @@ window.loadCartItems = loadCartItems;
 window.updateCartQuantity = updateCartQuantity;
 window.removeFromCart = removeFromCart;
 window.loadMoreRelatedProducts = loadMoreRelatedProducts;
+
+// Mobile Products Data for Pagination
+const mobileProductsData = {
+    1: [
+        {
+            title: "Customizable Big Size Insulated Travel Mug",
+            image: "./assets/img/feature_prod_01.jpg",
+            price: 2499,
+            oldPrice: 3000
+        },
+        {
+            title: "Personalized Coffee Brown Wooden Desk Organizer",
+            image: "./assets/img/feature_prod_02.jpg",
+            price: 2499,
+            oldPrice: 3500
+        },
+        {
+            title: "Golden Soccer Ball Champion's Trophy",
+            image: "./assets/img/feature_prod_03.jpg",
+            price: 7999,
+            oldPrice: 8500
+        },
+        {
+            title: "Classic White Mug for Sublimation Printing",
+            image: "./assets/img/shop_01.jpg",
+            price: 799,
+            oldPrice: 1000
+        },
+        {
+            title: "Premium Crystal Award Trophy",
+            image: "./assets/img/shop_02.jpg",
+            price: 12500,
+            oldPrice: 15000
+        },
+        {
+            title: "Custom Branded Vinyl Stickers",
+            image: "./assets/img/shop_03.jpg",
+            price: 350,
+            oldPrice: 500
+        }
+    ],
+    2: [
+        {
+            title: "Roll-Up Banner Stand Premium",
+            image: "./assets/img/shop_04.jpg",
+            price: 6500,
+            oldPrice: 7500
+        },
+        {
+            title: "PVC Outdoor Banner Weather Resistant",
+            image: "./assets/img/shop_05.jpg",
+            price: 3200,
+            oldPrice: 4000
+        },
+        {
+            title: "Professional PVC Foam Board",
+            image: "./assets/img/shop_06.jpg",
+            price: 6500,
+            oldPrice: 7000
+        },
+        {
+            title: "Custom Branded Gazebo Tent",
+            image: "./assets/img/shop_07.jpg",
+            price: 28000,
+            oldPrice: 32000
+        },
+        {
+            title: "3D Acrylic Letter Signage",
+            image: "./assets/img/shop_08.jpg",
+            price: 1200,
+            oldPrice: 1500
+        },
+        {
+            title: "Premium Aluminium Composite Sheets",
+            image: "./assets/img/shop_09.jpg",
+            price: 450,
+            oldPrice: 600
+        }
+    ],
+    3: [
+        {
+            title: "Corporate Executive Plaques",
+            image: "./assets/img/feature_prod_01.jpg",
+            price: 4500,
+            oldPrice: 5500
+        },
+        {
+            title: "Digital Printed Fabric Banners",
+            image: "./assets/img/shop_05.jpg",
+            price: 2800,
+            oldPrice: 3500
+        },
+        {
+            title: "Acrylic Photo Frames Premium",
+            image: "./assets/img/shop_01.jpg",
+            price: 1800,
+            oldPrice: 2200
+        },
+        {
+            title: "Custom Metal Name Badges",
+            image: "./assets/img/shop_02.jpg",
+            price: 650,
+            oldPrice: 800
+        },
+        {
+            title: "LED Illuminated Channel Letters",
+            image: "./assets/img/shop_08.jpg",
+            price: 15000,
+            oldPrice: 18000
+        },
+        {
+            title: "Professional Display Stands",
+            image: "./assets/img/shop_04.jpg",
+            price: 5200,
+            oldPrice: 6000
+        }
+    ],
+    4: [
+        {
+            title: "Luxury Crystal Trophy Awards",
+            image: "./assets/img/feature_prod_03.jpg",
+            price: 9500,
+            oldPrice: 11000
+        },
+        {
+            title: "Heavy Duty Vinyl Floor Graphics",
+            image: "./assets/img/shop_03.jpg",
+            price: 580,
+            oldPrice: 750
+        },
+        {
+            title: "Outdoor LED Light Box Signs",
+            image: "./assets/img/shop_07.jpg",
+            price: 22000,
+            oldPrice: 25000
+        },
+        {
+            title: "Corporate Wooden Desk Accessories",
+            image: "./assets/img/feature_prod_02.jpg",
+            price: 3200,
+            oldPrice: 4000
+        },
+        {
+            title: "Premium Acrylic Sheet Materials",
+            image: "./assets/img/shop_06.jpg",
+            price: 1200,
+            oldPrice: 1500
+        },
+        {
+            title: "Custom Fabric Pop-up Displays",
+            image: "./assets/img/shop_09.jpg",
+            price: 12500,
+            oldPrice: 15000
+        }
+    ],
+    5: [
+        {
+            title: "Professional Sublimation Mugs Set",
+            image: "./assets/img/feature_prod_01.jpg",
+            price: 1200,
+            oldPrice: 1500
+        },
+        {
+            title: "Corporate Event Banners",
+            image: "./assets/img/shop_05.jpg",
+            price: 4500,
+            oldPrice: 5500
+        },
+        {
+            title: "Premium Gold Medal Collection",
+            image: "./assets/img/shop_02.jpg",
+            price: 2500,
+            oldPrice: 3000
+        },
+        {
+            title: "Architectural Signage Solutions",
+            image: "./assets/img/shop_08.jpg",
+            price: 18000,
+            oldPrice: 22000
+        },
+        {
+            title: "Custom Acrylic Display Cases",
+            image: "./assets/img/shop_01.jpg",
+            price: 7500,
+            oldPrice: 9000
+        },
+        {
+            title: "Professional Gazebo Package",
+            image: "./assets/img/shop_07.jpg",
+            price: 35000,
+            oldPrice: 40000
+        }
+    ]
+};
+
+// Load products for specific page
+function loadPage(pageNumber) {
+    const productsGrid = document.getElementById('mobile-products-grid');
+    const pageButtons = document.querySelectorAll('.mobile-page-btn');
+    
+    if (!productsGrid || !mobileProductsData[pageNumber]) {
+        console.error('Page data not found for page:', pageNumber);
+        return;
+    }
+    
+    // Update active button
+    pageButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (parseInt(btn.getAttribute('data-page')) === pageNumber) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Generate HTML for products
+    let productsHTML = '';
+    mobileProductsData[pageNumber].forEach(product => {
+        productsHTML += `
+            <div class="col-6">
+                <div class="mobile-product-card" onclick="viewProduct('${product.title}')">
+                    <div class="mobile-product-image">
+                        <img src="${product.image}" alt="${product.title}" class="img-fluid">
+                        <div class="mobile-product-badge">KSh${product.price.toLocaleString()}</div>
+                    </div>
+                    <div class="mobile-product-info">
+                        <h6 class="mobile-product-title">${product.title}</h6>
+                        <div class="mobile-product-price-row">
+                            <span class="mobile-product-price-old">KSh${product.oldPrice.toLocaleString()}</span>
+                            <span class="mobile-product-price-new">KSh${product.price.toLocaleString()}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    // Update grid with fade effect
+    productsGrid.style.opacity = '0.5';
+    setTimeout(() => {
+        productsGrid.innerHTML = productsHTML;
+        productsGrid.style.opacity = '1';
+        
+        // Scroll to top of products section
+        const productsSection = document.querySelector('.mobile-products-section');
+        if (productsSection) {
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, 150);
+    
+    // Show loading notification
+    showNotification(`Loading page ${pageNumber} products...`, 'info');
+}
+
+// View product function
+function viewProduct(productTitle) {
+    // Convert product title to URL-friendly format
+    const productSlug = productTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    
+    // Redirect to product page
+    window.location.href = `shop-single.html?product=${productSlug}`;
+}
+
+// Mobile search functionality
+function initializeMobileSearch() {
+    const mobileSearchInput = document.getElementById('mobileSearchInput');
+    const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+    
+    if (mobileSearchInput && mobileSearchBtn) {
+        // Search on button click
+        mobileSearchBtn.addEventListener('click', function() {
+            const searchTerm = mobileSearchInput.value.trim();
+            if (searchTerm) {
+                window.location.href = `shop.html?search=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+        
+        // Search on Enter key
+        mobileSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    window.location.href = `shop.html?search=${encodeURIComponent(searchTerm)}`;
+                }
+            }
+        });
+    }
+}
+
+// Initialize mobile functionality on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile search
+    initializeMobileSearch();
+    
+    // Add smooth transitions to mobile product cards
+    const style = document.createElement('style');
+    style.textContent += `
+        .mobile-product-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #mobile-products-grid {
+            transition: opacity 0.3s ease;
+        }
+        
+        .mobile-page-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .mobile-search-input:focus {
+            border-color: #F95700;
+            box-shadow: 0 0 0 0.2rem rgba(249, 87, 0, 0.25);
+        }
+    `;
+    document.head.appendChild(style);
+});
+
+// Export functions for global access
+window.loadPage = loadPage;
+window.viewProduct = viewProduct;
